@@ -1,4 +1,7 @@
 package Day23Assignment;
+/*
+ * Functional Interface
+ */
 
 public interface Regex {
 	

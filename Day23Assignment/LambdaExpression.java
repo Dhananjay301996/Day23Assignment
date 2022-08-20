@@ -13,14 +13,14 @@ public class LambdaExpression {
  *Last name 
  */
 		System.out.println("Welcome to User Registration program");
-		Regex Mail = (name) -> {
-			boolean check = Pattern.matches("[a-zA-Z0-9]+[@]+[a-z]{2,5}[.][a-z]{2,4}", name);
+		Regex mobile = (name) -> {
+			boolean check = Pattern.matches("^([0-9]{2}+)[ ]([6-9]{1,1}+)([0-9]{9,9})$", name);
 			if (check == true) {
-				System.out.println("Firstname is Valid");
+				System.out.println("Mobile Number is Valid");
 			} else
-				System.out.println("Enter valid name");
+				System.out.println("Enter valid Mobile Number");
 		};
-		Mail.validName("Dhananjay123@gmail.com");
+		mobile.validName("91 8932435454");
 	}
 
 	}
