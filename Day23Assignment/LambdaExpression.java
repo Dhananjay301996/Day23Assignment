@@ -13,15 +13,20 @@ public class LambdaExpression {
  *password
  */
 		System.out.println("Welcome to User Registration program");
-		Regex password = (name) -> {
-			boolean check = Pattern.matches("[a-z]{8,12}", name);
-			if (check == true) {
-				System.out.println("password is Valid");
-			} else
-				System.out.println("Enter valid password ");
-		};
-		password.validName("Dhananjay");
+		
+/*
+ * At least One capital latter password 
+ */
+	Regex password1 = (pass) -> {
+		boolean check = Pattern.matches("[a-z]{8,12}", pass);
+		if (check == true) {
+			System.out.println("password is Valid");
+		} else
+			System.out.println("Enter valid password ");
+	};
+	password1.pass1("Dhananjay");
+	
 	}
-
-	}
+}
+	
 
