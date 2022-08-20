@@ -10,17 +10,17 @@ public class LambdaExpression {
 
 	public static void main(String[] args) {
 /*
- *Last name 
+ *password
  */
 		System.out.println("Welcome to User Registration program");
-		Regex mobile = (name) -> {
-			boolean check = Pattern.matches("^([0-9]{2}+)[ ]([6-9]{1,1}+)([0-9]{9,9})$", name);
+		Regex password = (name) -> {
+			boolean check = Pattern.matches("[a-z]{8,12}", name);
 			if (check == true) {
-				System.out.println("Mobile Number is Valid");
+				System.out.println("password is Valid");
 			} else
-				System.out.println("Enter valid Mobile Number");
+				System.out.println("Enter valid password ");
 		};
-		mobile.validName("91 8932435454");
+		password.validName("Dhananjay");
 	}
 
 	}
