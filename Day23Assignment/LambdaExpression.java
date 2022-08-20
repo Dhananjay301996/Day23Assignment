@@ -15,16 +15,16 @@ public class LambdaExpression {
 		System.out.println("Welcome to User Registration program");
 		
 /*
- * At least One capital latter and number in password 
+ * At least One capital latter and number and special character in password 
  */
-	Regex password2 = (pass) -> {
-		boolean check = Pattern.matches("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$", pass);
+	Regex password3 = (pass) -> {
+		boolean check = Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,24}$", pass);
 		if (check == true) {
 			System.out.println("password is Valid");
 		} else
 			System.out.println("Enter valid password ");
 	};
-	password2.pass1("Dhananjay123");
+	password3.pass1("Dhananjay@123");
 	
 	}
 }
